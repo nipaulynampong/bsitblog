@@ -225,14 +225,13 @@
     </Compile>
     <Compile Include="Editor\EditorLogin.aspx.vb">
       <DependentUpon>EditorLogin.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Editor\EditorPanel\CreatePosts.aspx.designer.vb">
       <DependentUpon>CreatePosts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Editor\EditorPanel\CreatePosts.aspx.vb">
       <DependentUpon>CreatePosts.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Editor\EditorPanel\EditorDashboard.aspx.designer.vb">
       <DependentUpon>EditorDashboard.aspx</DependentUpon>
@@ -246,7 +245,7 @@
     </Compile>
     <Compile Include="Editor\EditorPanel\EditorPanel.aspx.vb">
       <DependentUpon>EditorPanel.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Editor\EditorPanel\EditorSettings.aspx.designer.vb">
       <DependentUpon>EditorSettings.aspx</DependentUpon>

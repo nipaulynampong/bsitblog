@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="CreatePosts.aspx.vb" Inherits="BSIT.CreatePosts" %>
+<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="CreatePosts.aspx.vb" Inherits="BSIT.CreatePosts" ValidateRequest="false" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/v2sskgaunwbrdvdtfos69lwxaeu9620dvjn370e9hk3rt1ot/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         $(document).ready(function() {
             // Initialize Select2 for tags
@@ -43,7 +43,7 @@
             });
         });
 
-        // Initialize TinyMCE
+        // Initialize TinyMCE with your API key
         tinymce.init({
             selector: '#<%=txtContent.ClientID%>',
             height: 500,
@@ -495,14 +495,14 @@
                             <small class="text-muted">A short summary of your post (optional)</small>
                         </div>
 
-                        <div class="form-group">
+        <div class="form-group">
                             <asp:Label ID="lblContent" runat="server" CssClass="form-label" AssociatedControlID="txtContent">Content</asp:Label>
                             <asp:TextBox ID="txtContent" runat="server" TextMode="MultiLine" CssClass="form-control" />
                             <asp:RequiredFieldValidator ID="rfvContent" runat="server" ControlToValidate="txtContent"
                                 ErrorMessage="Content is required" Display="Dynamic" CssClass="text-danger" />
-                        </div>
-                        
-                        <div class="form-group">
+        </div>
+
+        <div class="form-group">
                             <asp:Label ID="lblFeaturedImage" runat="server" CssClass="form-label" AssociatedControlID="fileImage">Featured Image</asp:Label>
                             <asp:FileUpload ID="fileImage" runat="server" CssClass="form-control" accept="image/*" />
                             <small class="text-muted">Recommended size: 1200x630 pixels</small>
@@ -516,9 +516,9 @@
                                     <asp:Label ID="lblCategory" runat="server" CssClass="form-label" AssociatedControlID="ddlCategory">Category</asp:Label>
                                     <asp:DropDownList ID="ddlCategory" runat="server" CssClass="form-select">
                                         <asp:ListItem Text="-- Select Category --" Value="" />
-                                    </asp:DropDownList>
-                                </div>
-                                
+            </asp:DropDownList>
+        </div>
+
                                 <div id="custom-category-container">
                                     <div class="form-group">
                                         <asp:Label ID="lblNewCategory" runat="server" CssClass="form-label" AssociatedControlID="txtNewCategory">New Category Name</asp:Label>
@@ -552,7 +552,7 @@
                             </div>
                             
                             <div class="col-md-6">
-                                <div class="form-group">
+        <div class="form-group">
                                     <asp:Label ID="lblStatus" runat="server" CssClass="form-label" AssociatedControlID="ddlStatus">Status</asp:Label>
                                     <asp:DropDownList ID="ddlStatus" runat="server" CssClass="form-select">
                                         <asp:ListItem Text="Draft" Value="Draft" />
@@ -560,8 +560,8 @@
                                         <asp:ListItem Text="Pending Review" Value="Pending" />
                                     </asp:DropDownList>
                                 </div>
-                            </div>
-                        </div>
+            </div>
+        </div>
                         
                         <div class="toggle-container mt-3">
                             <label class="toggle-switch">
@@ -577,9 +577,9 @@
                             <asp:Label ID="lblMetaTitle" runat="server" CssClass="form-label" AssociatedControlID="txtMetaTitle">Meta Title</asp:Label>
                             <asp:TextBox ID="txtMetaTitle" runat="server" CssClass="form-control" placeholder="Enter SEO title (max 60 characters)" MaxLength="60" />
                             <small class="text-muted">Leave empty to use the post title</small>
-                        </div>
+        </div>
 
-                        <div class="form-group">
+        <div class="form-group">
                             <asp:Label ID="lblMetaDescription" runat="server" CssClass="form-label" AssociatedControlID="txtMetaDescription">Meta Description</asp:Label>
                             <asp:TextBox ID="txtMetaDescription" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" placeholder="Enter meta description (max 160 characters)" MaxLength="160" />
                             <small class="text-muted">Brief description for search engines (recommended 50-160 characters)</small>
@@ -588,13 +588,13 @@
 
                     <div class="actions-row">
                         <div class="actions-left">
-                            <asp:Button ID="btnSaveAsDraft" runat="server" Text="📄 Save as Draft" CssClass="btn btn-secondary" OnClick="btnSaveAsDraft_Click" CausesValidation="false" />
-                            <asp:Button ID="btnSave" runat="server" Text="💾 Save" CssClass="btn btn-primary" OnClick="btnSave_Click" />
-                            <asp:Button ID="btnPublish" runat="server" Text="🚀 Publish" CssClass="btn btn-success" OnClick="btnPublish_Click" />
+                            <asp:Button ID="btnSaveAsDraft" runat="server" Text="Save as Draft" CssClass="btn btn-secondary" OnClick="btnSaveAsDraft_Click" CausesValidation="false" />
+                            <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnSave_Click" />
+                            <asp:Button ID="btnPublish" runat="server" Text="Publish" CssClass="btn btn-success" OnClick="btnPublish_Click" />
                         </div>
                         <div class="actions-right">
-                            <asp:Button ID="btnPreview" runat="server" Text="👁️ Preview" CssClass="btn btn-info" OnClick="btnPreview_Click" CausesValidation="false" />
-                            <asp:Button ID="btnCancel" runat="server" Text="❌ Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click" CausesValidation="false" />
+                            <asp:Button ID="btnPreview" runat="server" Text="Preview" CssClass="btn btn-info" OnClick="btnPreview_Click" CausesValidation="false" />
+                            <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click" CausesValidation="false" />
                         </div>
                     </div>
                 </div>
@@ -619,4 +619,4 @@
         </script>
     </form>
 </body>
-</html> 
+</html>

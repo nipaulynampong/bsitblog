@@ -10,16 +10,35 @@
 Option Strict On
 Option Explicit On
 
-
-
-Partial Public Class EditorPanel
-
-    '''<summary>
-    '''form1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-End Class
+Namespace BSIT
+    
+    Public Partial Class EditorPanel
+        
+        '''<summary>
+        '''form1 control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+        
+        '''<summary>
+        '''lblEditorName control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblEditorName As Global.System.Web.UI.WebControls.Label
+        
+        '''<summary>
+        '''lblUsername control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblUsername As Global.System.Web.UI.WebControls.Label
+    End Class
+End Namespace

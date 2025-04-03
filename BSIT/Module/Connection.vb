@@ -41,7 +41,34 @@ Namespace BSIT.Module
                 Parameters.Clear()
             End If
 
-            If command_query.StartsWith("INSERT", StringComparison.OrdinalIgnoreCase) OrElse
+            If command_query.Contains("SELECT SCOPE_IDENTITY()") Then
+                ' This is an INSERT query that also wants to return the new ID
+                Try
+                    Dim result As Object = command.ExecuteScalar()
+                    Data = New DataSet()
+                    Dim dt As New DataTable()
+                    dt.Columns.Add("ID")
+                    Dim row As DataRow = dt.NewRow()
+                    
+                    ' Handle the case when result is NULL
+                    If result Is Nothing OrElse DBNull.Value.Equals(result) Then
+                        row("ID") = DBNull.Value
+                    Else
+                        row("ID") = result
+                    End If
+                    
+                    dt.Rows.Add(row)
+                    Data.Tables.Add(dt)
+                    DataCount = 1
+                    Close()
+                    Return True
+                Catch ex As Exception
+                    ' Log the exception details for debugging
+                    Console.WriteLine("Error in Query method: " & ex.Message)
+                    Close()
+                    Return False
+                End Try
+            ElseIf command_query.StartsWith("INSERT", StringComparison.OrdinalIgnoreCase) OrElse
                command_query.StartsWith("UPDATE", StringComparison.OrdinalIgnoreCase) OrElse
                command_query.StartsWith("DELETE", StringComparison.OrdinalIgnoreCase) Then
 

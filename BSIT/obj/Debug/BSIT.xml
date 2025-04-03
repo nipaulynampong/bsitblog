@@ -22,7 +22,7 @@ form1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:BSIT.EditorPanel.form1">
+</member><member name="F:BSIT.BSIT.EditorPanel.form1">
 	<summary>
 form1 control.
 </summary>
@@ -30,9 +30,57 @@ form1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:BSIT.EditorLogin.form1">
+</member><member name="F:BSIT.BSIT.EditorPanel.lblEditorName">
+	<summary>
+lblEditorName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:BSIT.BSIT.EditorPanel.lblUsername">
+	<summary>
+lblUsername control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:BSIT.BSIT.EditorLogin.form1">
 	<summary>
 form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:BSIT.BSIT.EditorLogin.errorMessage">
+	<summary>
+errorMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:BSIT.BSIT.EditorLogin.txtUsername">
+	<summary>
+txtUsername control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:BSIT.BSIT.EditorLogin.txtPassword">
+	<summary>
+txtPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:BSIT.BSIT.EditorLogin.btnLogin">
+	<summary>
+btnLogin control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -239,7 +287,7 @@ form1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:BSIT.EditorSettings.form1">
+</member><member name="F:BSIT.BSIT.EditorSettings.form1">
 	<summary>
 form1 control.
 </summary>

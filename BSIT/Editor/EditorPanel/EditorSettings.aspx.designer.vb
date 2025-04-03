@@ -10,16 +10,26 @@
 Option Strict On
 Option Explicit On
 
+Namespace BSIT
+    Partial Public Class EditorSettings
 
+        '''<summary>
+        '''form1 control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+        Protected WithEvents txtDisplayName As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtBio As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtCurrentPassword As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtNewPassword As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtConfirmPassword As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents chkEmailNotifications As Global.System.Web.UI.WebControls.CheckBox
+        Protected WithEvents chkCommentNotifications As Global.System.Web.UI.WebControls.CheckBox
+        Protected WithEvents btnSaveSettings As Global.System.Web.UI.WebControls.Button
 
-Partial Public Class EditorSettings
-
-    '''<summary>
-    '''form1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-End Class
+    End Class
+End Namespace

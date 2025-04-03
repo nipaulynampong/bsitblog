@@ -1,0 +1,326 @@
+2025-04-03 17:11:41 - Starting SavePost with status: Draft
+2025-04-03 17:11:41 - Featured image URL: None
+2025-04-03 17:11:41 - Post slug: AWAW
+2025-04-03 17:11:41 - Category ID: 6
+2025-04-03 17:11:41 - Publish date: NULL
+2025-04-03 17:11:41 - Author ID: 1
+2025-04-03 17:11:41 - Adding parameters for database insert
+2025-04-03 17:11:41 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 17:11:41 - Exception in SavePost: Invalid column name 'CategoryID'.
+Invalid column name 'FeaturedImage'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at BSIT.BSIT.Module.Connection.Query(String command_query) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Module\Connection.vb:line 48
+   at BSIT.CreatePosts.SavePost(String status) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Editor\EditorPanel\CreatePosts.aspx.vb:line 328
+2025-04-03 17:56:20 - Starting SavePost with status: Draft
+2025-04-03 17:56:20 - Featured image URL: None
+2025-04-03 17:56:20 - Post slug: SFSEFESQ
+2025-04-03 17:56:20 - Category ID: 7
+2025-04-03 17:56:20 - Publish date: NULL
+2025-04-03 17:56:20 - Author ID: 1
+2025-04-03 17:56:20 - Adding parameters for database insert
+2025-04-03 17:56:20 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 17:56:21 - Exception in SavePost: Invalid column name 'CategoryID'.
+Invalid column name 'FeaturedImage'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at BSIT.BSIT.Module.Connection.Query(String command_query) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Module\Connection.vb:line 48
+   at BSIT.CreatePosts.SavePost(String status) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Editor\EditorPanel\CreatePosts.aspx.vb:line 328
+2025-04-03 18:13:08 - Starting SavePost with status: Draft
+2025-04-03 18:13:08 - Featured image URL: None
+2025-04-03 18:13:08 - Post slug: awdaw
+2025-04-03 18:13:08 - Category ID: 7
+2025-04-03 18:13:08 - Publish date: NULL
+2025-04-03 18:13:08 - Author ID: 1
+2025-04-03 18:13:08 - Adding parameters for database insert
+2025-04-03 18:13:08 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:13:08 - Exception in SavePost: Invalid column name 'CategoryID'.
+Invalid column name 'FeaturedImage'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at BSIT.BSIT.Module.Connection.Query(String command_query) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Module\Connection.vb:line 48
+   at BSIT.CreatePosts.SavePost(String status) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Editor\EditorPanel\CreatePosts.aspx.vb:line 328
+2025-04-03 18:24:36 - Starting SavePost with status: Draft
+2025-04-03 18:24:36 - Featured image URL: None
+2025-04-03 18:24:36 - Post slug: awdaw
+2025-04-03 18:24:36 - Category ID: 7
+2025-04-03 18:24:36 - Publish date: NULL
+2025-04-03 18:24:36 - Author ID: 1
+2025-04-03 18:24:36 - Adding parameters for database insert
+2025-04-03 18:24:36 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:24:36 - Exception in SavePost: Invalid column name 'CategoryID'.
+Invalid column name 'FeaturedImage'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at BSIT.BSIT.Module.Connection.Query(String command_query) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Module\Connection.vb:line 48
+   at BSIT.CreatePosts.SavePost(String status) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Editor\EditorPanel\CreatePosts.aspx.vb:line 328
+2025-04-03 18:26:19 - Starting SavePost with status: Draft
+2025-04-03 18:26:19 - Featured image URL: None
+2025-04-03 18:26:19 - Post slug: awdaw
+2025-04-03 18:26:19 - Category ID: 7
+2025-04-03 18:26:19 - Publish date: NULL
+2025-04-03 18:26:19 - Author ID: 1
+2025-04-03 18:26:19 - Adding parameters for database insert
+2025-04-03 18:26:19 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:26:20 - Exception in SavePost: Invalid column name 'CategoryID'.
+Invalid column name 'FeaturedImage'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at BSIT.BSIT.Module.Connection.Query(String command_query) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Module\Connection.vb:line 48
+   at BSIT.CreatePosts.SavePost(String status) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Editor\EditorPanel\CreatePosts.aspx.vb:line 328
+2025-04-03 18:27:20 - Starting SavePost with status: Draft
+2025-04-03 18:27:20 - Featured image URL: None
+2025-04-03 18:27:20 - Post slug: adasf
+2025-04-03 18:27:20 - Category ID: 0
+2025-04-03 18:27:20 - Publish date: NULL
+2025-04-03 18:27:20 - Author ID: 1
+2025-04-03 18:27:20 - Adding parameters for database insert
+2025-04-03 18:27:20 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:27:20 - Exception in SavePost: Invalid column name 'CategoryID'.
+Invalid column name 'FeaturedImage'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at BSIT.BSIT.Module.Connection.Query(String command_query) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Module\Connection.vb:line 48
+   at BSIT.CreatePosts.SavePost(String status) in C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\Editor\EditorPanel\CreatePosts.aspx.vb:line 328
+2025-04-03 18:29:13 - Starting SavePost with status: Draft
+2025-04-03 18:29:13 - Featured image URL: None
+2025-04-03 18:29:13 - Post slug: adasf
+2025-04-03 18:29:13 - Category ID: 0
+2025-04-03 18:29:13 - Publish date: NULL
+2025-04-03 18:29:13 - Author ID: 1
+2025-04-03 18:29:13 - Adding parameters for database insert
+2025-04-03 18:29:13 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:29:15 - Query executed successfully
+2025-04-03 18:29:15 - Error: No data returned. DataCount=0
+2025-04-03 18:30:14 - Starting SavePost with status: Draft
+2025-04-03 18:30:14 - Featured image URL: None
+2025-04-03 18:30:14 - Post slug: adasf
+2025-04-03 18:30:14 - Category ID: 3
+2025-04-03 18:30:14 - Publish date: NULL
+2025-04-03 18:30:14 - Author ID: 1
+2025-04-03 18:30:14 - Adding parameters for database insert
+2025-04-03 18:30:14 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:30:14 - Query executed successfully
+2025-04-03 18:30:14 - Error: No data returned. DataCount=0
+2025-04-03 18:33:57 - Starting SavePost with status: Draft
+2025-04-03 18:33:57 - Featured image URL: None
+2025-04-03 18:33:57 - Post slug: adasf
+2025-04-03 18:33:57 - Category ID: 3
+2025-04-03 18:33:57 - Publish date: NULL
+2025-04-03 18:33:57 - Author ID: 1
+2025-04-03 18:33:57 - Adding parameters for database insert
+2025-04-03 18:33:57 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:34:56 - Starting SavePost with status: Draft
+2025-04-03 18:34:56 - Featured image URL: None
+2025-04-03 18:34:56 - Post slug: dasdasd
+2025-04-03 18:34:56 - Category ID: 2
+2025-04-03 18:34:56 - Publish date: NULL
+2025-04-03 18:34:56 - Author ID: 1
+2025-04-03 18:34:56 - Adding parameters for database insert
+2025-04-03 18:34:56 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:34:56 - Query executed successfully
+2025-04-03 18:34:56 - Error: No data returned. DataCount=0
+2025-04-03 18:38:04 - Starting SavePost with status: Draft
+2025-04-03 18:38:04 - Featured image URL: None
+2025-04-03 18:38:04 - Post slug: dasdasd
+2025-04-03 18:38:04 - Category ID: 2
+2025-04-03 18:38:04 - Publish date: NULL
+2025-04-03 18:38:04 - Author ID: 1
+2025-04-03 18:38:04 - Adding parameters for database insert
+2025-04-03 18:38:04 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:38:04 - Query executed successfully
+2025-04-03 18:38:04 - Error: No data returned. DataCount=0
+2025-04-03 18:38:13 - Starting SavePost with status: Draft
+2025-04-03 18:38:13 - Featured image URL: None
+2025-04-03 18:38:13 - Post slug: dasdasd
+2025-04-03 18:38:13 - Category ID: 2
+2025-04-03 18:38:13 - Publish date: NULL
+2025-04-03 18:38:13 - Author ID: 1
+2025-04-03 18:38:13 - Adding parameters for database insert
+2025-04-03 18:38:13 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:38:13 - Query executed successfully
+2025-04-03 18:38:13 - Error: No data returned. DataCount=0
+2025-04-03 18:38:37 - Starting SavePost with status: Draft
+2025-04-03 18:38:37 - Featured image URL: None
+2025-04-03 18:38:37 - Post slug: dasdasd
+2025-04-03 18:38:37 - Category ID: 2
+2025-04-03 18:38:37 - Publish date: NULL
+2025-04-03 18:38:37 - Author ID: 1
+2025-04-03 18:38:37 - Adding parameters for database insert
+2025-04-03 18:38:37 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:38:37 - Query executed successfully
+2025-04-03 18:38:37 - Error: No data returned. DataCount=0
+2025-04-03 18:40:35 - Starting SavePost with status: Draft
+2025-04-03 18:40:35 - Featured image URL: None
+2025-04-03 18:40:35 - Post slug: dasdasd
+2025-04-03 18:40:35 - Category ID: 2
+2025-04-03 18:40:35 - Publish date: NULL
+2025-04-03 18:40:35 - Author ID: 1
+2025-04-03 18:40:35 - Adding parameters for database insert
+2025-04-03 18:40:35 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:40:36 - Query executed successfully
+2025-04-03 18:40:36 - Error: No data returned. DataCount=0
+2025-04-03 18:41:45 - Starting SavePost with status: Draft
+2025-04-03 18:41:45 - Featured image URL: None
+2025-04-03 18:41:45 - Post slug: af
+2025-04-03 18:41:45 - Category ID: 0
+2025-04-03 18:41:45 - Publish date: NULL
+2025-04-03 18:41:45 - Author ID: 1
+2025-04-03 18:41:45 - Adding parameters for database insert
+2025-04-03 18:41:45 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:41:45 - Query executed successfully
+2025-04-03 18:41:45 - Data received: DataCount=1, TableCount=1, RowCount=1
+2025-04-03 18:41:45 - Result value: 15
+2025-04-03 18:41:45 - Post ID: 15
+2025-04-03 18:41:45 - Post saved successfully with ID: 15
+2025-04-03 18:48:41 - Starting SavePost with status: Draft
+2025-04-03 18:48:41 - Featured image URL: None
+2025-04-03 18:48:41 - Post slug: AWAW
+2025-04-03 18:48:41 - Category ID: 0
+2025-04-03 18:48:41 - Publish date: NULL
+2025-04-03 18:48:41 - Author ID: 1
+2025-04-03 18:48:41 - Adding parameters for database insert
+2025-04-03 18:48:41 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:48:41 - Query executed successfully
+2025-04-03 18:48:41 - Data received: DataCount=1, TableCount=1, RowCount=1
+2025-04-03 18:48:41 - Result value: 16
+2025-04-03 18:48:41 - Post ID: 16
+2025-04-03 18:48:41 - Post saved successfully with ID: 16
+2025-04-03 18:52:16 - Starting SavePost with status: Draft
+2025-04-03 18:52:16 - Featured image URL: None
+2025-04-03 18:52:16 - Post slug: baaaaaaaaaaaaaaaaa
+2025-04-03 18:52:16 - Category ID: 0
+2025-04-03 18:52:16 - Publish date: NULL
+2025-04-03 18:52:16 - Author ID: 1
+2025-04-03 18:52:16 - Adding parameters for database insert
+2025-04-03 18:52:16 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:52:16 - Query executed successfully
+2025-04-03 18:52:16 - Data received: DataCount=1, TableCount=1, RowCount=1
+2025-04-03 18:52:16 - Result value: 17
+2025-04-03 18:52:16 - Post ID: 17
+2025-04-03 18:52:16 - Post saved successfully with ID: 17
+2025-04-03 18:56:49 - Starting SavePost with status: Draft
+2025-04-03 18:56:49 - Featured image URL: None
+2025-04-03 18:56:49 - Post slug: baaaaaaaaaaaaaaaaa
+2025-04-03 18:56:49 - Category ID: 0
+2025-04-03 18:56:49 - Publish date: NULL
+2025-04-03 18:56:49 - Author ID: 1
+2025-04-03 18:56:49 - Adding parameters for database insert
+2025-04-03 18:56:49 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 18:56:49 - Query executed successfully
+2025-04-03 18:56:49 - Data received: DataCount=1, TableCount=1, RowCount=1
+2025-04-03 18:56:49 - Result value: 18
+2025-04-03 18:56:49 - Post ID: 18
+2025-04-03 18:56:50 - Post saved successfully with ID: 18
+2025-04-03 19:05:17 - Starting SavePost with status: Draft
+2025-04-03 19:05:17 - Featured image URL: ~/uploads/6d6aa5d5-72f5-4502-81ca-91adb686bf83.png
+2025-04-03 19:05:17 - Post slug: adadad
+2025-04-03 19:05:17 - Category ID: 0
+2025-04-03 19:05:17 - Publish date: NULL
+2025-04-03 19:05:17 - Author ID: 1
+2025-04-03 19:05:17 - Adding parameters for database insert
+2025-04-03 19:05:17 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 19:05:17 - Query executed successfully
+2025-04-03 19:05:17 - Data received: DataCount=1, TableCount=1, RowCount=1
+2025-04-03 19:05:17 - Result value: 19
+2025-04-03 19:05:17 - Post ID: 19
+2025-04-03 19:05:17 - Post saved successfully with ID: 19
+2025-04-03 19:05:51 - Starting SavePost with status: Published
+2025-04-03 19:05:51 - Featured image URL: ~/uploads/84794760-79a4-4c98-b90b-55aec850d795.png
+2025-04-03 19:05:51 - Post slug: adadad
+2025-04-03 19:05:51 - Category ID: 0
+2025-04-03 19:05:51 - Publish date: 2025-04-03 19:05:00
+2025-04-03 19:05:51 - Author ID: 1
+2025-04-03 19:05:51 - Adding parameters for database insert
+2025-04-03 19:05:51 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription, PublishedDate) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription, @PublishedDate); SELECT SCOPE_IDENTITY();
+2025-04-03 19:05:51 - Error executing SQL command
+2025-04-03 19:06:10 - Starting SavePost with status: Draft
+2025-04-03 19:06:10 - Featured image URL: ~/uploads/2a8fc71a-8678-4863-8df0-cdb2eeb92c91.png
+2025-04-03 19:06:10 - Post slug: adadad
+2025-04-03 19:06:10 - Category ID: 0
+2025-04-03 19:06:10 - Publish date: NULL
+2025-04-03 19:06:10 - Author ID: 1
+2025-04-03 19:06:10 - Adding parameters for database insert
+2025-04-03 19:06:10 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 19:06:10 - Query executed successfully
+2025-04-03 19:06:10 - Data received: DataCount=1, TableCount=1, RowCount=1
+2025-04-03 19:06:10 - Result value: 20
+2025-04-03 19:06:10 - Post ID: 20
+2025-04-03 19:06:10 - Post saved successfully with ID: 20
+2025-04-03 19:09:00 - Starting SavePost with status: Draft
+2025-04-03 19:09:00 - Featured image URL: ~/uploads/55beb1da-327e-4200-a752-1e6a1c80fbd3.png
+2025-04-03 19:09:00 - Post slug: asdasdasd
+2025-04-03 19:09:00 - Category ID: 0
+2025-04-03 19:09:00 - Publish date: NULL
+2025-04-03 19:09:00 - Author ID: 1
+2025-04-03 19:09:00 - Adding parameters for database insert
+2025-04-03 19:09:00 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 19:09:00 - Query executed successfully
+2025-04-03 19:09:00 - Data received: DataCount=1, TableCount=1, RowCount=1
+2025-04-03 19:09:00 - Result value: 21
+2025-04-03 19:09:00 - Post ID: 21
+2025-04-03 19:09:00 - Post saved successfully with ID: 21
+2025-04-03 19:38:13 - Starting SavePost with status: Draft
+2025-04-03 19:38:13 - Featured image URL: ~/uploads/f6e49f98-66d7-41e8-8d22-55c710da6df2.png
+2025-04-03 19:38:13 - Post slug: asdas
+2025-04-03 19:38:13 - Category ID: 0
+2025-04-03 19:38:13 - Publish date: NULL
+2025-04-03 19:38:13 - Author ID: 1
+2025-04-03 19:38:13 - Adding parameters for database insert
+2025-04-03 19:38:13 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription); SELECT SCOPE_IDENTITY();
+2025-04-03 19:38:13 - Query executed successfully
+2025-04-03 19:38:13 - Data received: DataCount=1, TableCount=1, RowCount=1
+2025-04-03 19:38:13 - Result value: 22
+2025-04-03 19:38:13 - Post ID: 22
+2025-04-03 19:38:13 - Post saved successfully with ID: 22
+2025-04-03 19:38:17 - Starting SavePost with status: Published
+2025-04-03 19:38:17 - Featured image URL: None
+2025-04-03 19:38:17 - Post slug: asdas
+2025-04-03 19:38:17 - Category ID: 0
+2025-04-03 19:38:17 - Publish date: 2025-04-03 19:37:00
+2025-04-03 19:38:17 - Author ID: 1
+2025-04-03 19:38:17 - Adding parameters for database insert
+2025-04-03 19:38:17 - Executing SQL query: INSERT INTO Posts (Title, Slug, Content, Excerpt, CategoryID, AuthorID, Status, CreatedDate, LastModifiedDate, FeaturedImage, AllowComments, MetaTitle, MetaDescription, PublishedDate) VALUES (@Title, @Slug, @Content, @Excerpt, @CategoryID, @AuthorID, @Status, @CreatedDate, @LastModifiedDate, @FeaturedImage, @AllowComments, @MetaTitle, @MetaDescription, @PublishedDate); SELECT SCOPE_IDENTITY();
+2025-04-03 19:38:18 - Error executing SQL command

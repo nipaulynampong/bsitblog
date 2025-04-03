@@ -1,6 +1,6 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="EditorPanel.aspx.vb" Inherits="BSIT.EditorPanel" %>
+﻿<%@ Page Language="VB" AutoEventWireup="true" CodeFile="EditorPanel.aspx.vb" Inherits="BSIT.EditorPanel" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -172,6 +172,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="ManageEditorPost.aspx" class="nav-link" target="contentFrame">
+                        <i class="fas fa-list"></i> Manage Posts
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="EditorSettings.aspx" class="nav-link" target="contentFrame">
                         <i class="fas fa-cog"></i> Settings
                     </a>
@@ -180,16 +185,16 @@
         </div>
         <div class="main-content">
             <div class="header">
-                <h1 class="welcome-text">Welcome, Editor</h1>
+                <h1 class="welcome-text">Welcome, <asp:Label ID="lblEditorName" runat="server" Text="Editor"></asp:Label></h1>
                 <div class="user-profile">
                     <div class="profile-img">
                         <i class="fas fa-user"></i>
                     </div>
-                    <span>Editor Name</span>
+                    <span><asp:Label ID="lblUsername" runat="server" Text="Editor Name"></asp:Label></span>
                 </div>
             </div>
             <div class="content-frame">
-                <iframe id="contentFrame" title="Editor Content Frame" src="EditorDashboard.aspx"></iframe>
+                <iframe id="contentFrame" name="contentFrame" title="Editor Content Frame" src="EditorDashboard.aspx"></iframe>
             </div>
         </div>
     </div>
@@ -208,7 +213,7 @@
 
         // Update active nav link when iframe content changes
         window.addEventListener('load', function() {
-            const iframe = document.querySelector('iframe[id="contentFrame"]');
+            const iframe = document.querySelector('iframe[name="contentFrame"]');
             iframe.addEventListener('load', function() {
                 const links = document.querySelectorAll('.nav-link');
                 links.forEach(link => {
