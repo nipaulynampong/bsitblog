@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="CreatePosts.aspx.vb" Inherits="BSIT.CreatePosts" %>
+﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="CreatePosts.aspx.vb" Inherits="BSIT.CreatePosts" %>
 
 <!DOCTYPE html>
 
@@ -588,13 +588,23 @@
 
                     <div class="actions-row">
                         <div class="actions-left">
-                            <asp:Button ID="btnSaveAsDraft" runat="server" Text="📄 Save as Draft" CssClass="btn btn-secondary" OnClick="btnSaveAsDraft_Click" CausesValidation="false" />
-                            <asp:Button ID="btnSave" runat="server" Text="💾 Save" CssClass="btn btn-primary" OnClick="btnSave_Click" />
-                            <asp:Button ID="btnPublish" runat="server" Text="🚀 Publish" CssClass="btn btn-success" OnClick="btnPublish_Click" />
+                            <asp:Button ID="btnSaveAsDraft" runat="server" Text="Save as Draft" CssClass="btn btn-secondary" OnClick="btnSaveAsDraft_Click" CausesValidation="false">
+                                <i class="fas fa-save"></i>
+                            </asp:Button>
+                            <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnSave_Click">
+                                <i class="fas fa-save"></i>
+                            </asp:Button>
+                            <asp:Button ID="btnPublish" runat="server" Text="Publish" CssClass="btn btn-success" OnClick="btnPublish_Click">
+                                <i class="fas fa-paper-plane"></i>
+                            </asp:Button>
                         </div>
                         <div class="actions-right">
-                            <asp:Button ID="btnPreview" runat="server" Text="👁️ Preview" CssClass="btn btn-info" OnClick="btnPreview_Click" CausesValidation="false" />
-                            <asp:Button ID="btnCancel" runat="server" Text="❌ Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click" CausesValidation="false" />
+                            <asp:Button ID="btnPreview" runat="server" Text="Preview" CssClass="btn btn-info" OnClick="btnPreview_Click" CausesValidation="false">
+                                <i class="fas fa-eye"></i>
+                            </asp:Button>
+                            <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click" CausesValidation="false">
+                                <i class="fas fa-times"></i>
+                            </asp:Button>
                         </div>
                     </div>
                 </div>
@@ -619,4 +629,4 @@
         </script>
     </form>
 </body>
-</html> 
+</html>

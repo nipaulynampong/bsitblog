@@ -189,7 +189,7 @@
                 </div>
             </div>
             <div class="content-frame">
-                <iframe name="contentFrame" src="EditorDashboard.aspx"></iframe>
+                <iframe id="contentFrame" title="Editor Content Frame" src="EditorDashboard.aspx"></iframe>
             </div>
         </div>
     </div>
@@ -208,7 +208,7 @@
 
         // Update active nav link when iframe content changes
         window.addEventListener('load', function() {
-            const iframe = document.querySelector('iframe[name="contentFrame"]');
+            const iframe = document.querySelector('iframe[id="contentFrame"]');
             iframe.addEventListener('load', function() {
                 const links = document.querySelectorAll('.nav-link');
                 links.forEach(link => {

@@ -3,8 +3,8 @@ Imports System.Data.SqlClient
 Imports System.IO
 
 Namespace BSIT
-    Public Class Settings
-        Inherits System.Web.UI.Page
+Public Class Settings
+    Inherits System.Web.UI.Page
 
         ' Control declarations
         Protected WithEvents txtBlogTitle As System.Web.UI.WebControls.TextBox
@@ -35,7 +35,7 @@ Namespace BSIT
 
         Private Const ConnectionString As String = "Data Source=NIPAULYN\SQLEXPRESS01;Initial Catalog=blog;Integrated Security=True"
 
-        Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
             If Not IsPostBack Then
                 ' Check if user is logged in and is admin
                 If Session("UserID") Is Nothing Then
@@ -537,7 +537,7 @@ Namespace BSIT
             ' Register script to hide the message after a few seconds
             ScriptManager.RegisterStartupScript(Me, Me.GetType(), "SuccessMessageTimeout", 
                 "$('.success-message').show().delay(3000).fadeOut();", True)
-        End Sub
+    End Sub
 
         Private Sub ShowErrorMessage(message As String)
             litErrorMessage.Text = message
@@ -545,5 +545,5 @@ Namespace BSIT
             pnlSuccess.Visible = False
         End Sub
         #End Region
-    End Class
+End Class
 End Namespace

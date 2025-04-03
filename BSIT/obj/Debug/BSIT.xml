@@ -6,23 +6,7 @@ BSIT
 </name>
 </assembly>
 <members>
-<member name="F:BSIT.BSIT.ViewPosts.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:BSIT.BSIT.ArchivePosts.form1">
-	<summary>
-form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:BSIT.Dashboard.form1">
+<member name="F:BSIT.Dashboard.form1">
 	<summary>
 form1 control.
 </summary>
@@ -183,7 +167,23 @@ form1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:BSIT.BSIT.ViewPosts.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:BSIT.Posts.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:BSIT.BSIT.ArchivePosts.form1">
 	<summary>
 form1 control.
 </summary>

@@ -9,8 +9,41 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
+        $(document).ready(function() {
+            // Initialize Select2 for tags
+            $('#<%= ddlTags.ClientID %>').select2({
+                tags: true,
+                tokenSeparators: [','],
+                placeholder: "Select or add tags...",
+                allowClear: true
+            });
+
+            // Initialize Flatpickr for date/time picker
+            flatpickr('#<%= txtPublishDate.ClientID %>', {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+                time_24hr: false,
+                minDate: "today"
+            });
+
+            // Show/hide custom category input based on dropdown selection
+            $('#<%= ddlCategory.ClientID %>').change(function() {
+                if ($(this).val() === 'custom') {
+                    $('#custom-category-container').show();
+                } else {
+                    $('#custom-category-container').hide();
+                }
+            });
+        });
+
+        // Initialize TinyMCE
         tinymce.init({
             selector: '#<%=txtContent.ClientID%>',
             height: 500,
@@ -23,7 +56,30 @@
             branding: false,
             quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
             entity_encoding: 'raw',
-            content_style: 'body { font-family:Poppins,Arial,sans-serif; font-size:16px; }'
+            content_style: 'body { font-family:Poppins,Arial,sans-serif; font-size:16px; }',
+            // Setup for image uploads
+            images_upload_handler: function (blobInfo, success, failure) {
+                var xhr, formData;
+                xhr = new XMLHttpRequest();
+                xhr.withCredentials = false;
+                xhr.open('POST', 'UploadImage.ashx');
+                xhr.onload = function() {
+                    var json;
+                    if (xhr.status != 200) {
+                        failure('HTTP Error: ' + xhr.status);
+                        return;
+                    }
+                    json = JSON.parse(xhr.responseText);
+                    if (!json || typeof json.location != 'string') {
+                        failure('Invalid JSON: ' + xhr.responseText);
+                        return;
+                    }
+                    success(json.location);
+                };
+                formData = new FormData();
+                formData.append('file', blobInfo.blob(), blobInfo.filename());
+                xhr.send(formData);
+            }
         });
     </script>
     <style>
@@ -250,60 +306,145 @@
         }
 
         .alert-success {
-            color: #155724;
-            background-color: #d4edda;
-            border-color: #c3e6cb;
+            background-color: #d1e7dd;
+            border-color: #badbcc;
+            color: #0f5132;
         }
 
         .alert-danger {
-            color: #721c24;
             background-color: #f8d7da;
-            border-color: #f5c6cb;
+            border-color: #f5c2c7;
+            color: #842029;
         }
 
-        .breadcrumb {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0;
-            margin-bottom: 20px;
-            list-style: none;
-            gap: 5px;
-            font-size: 14px;
+        .select2-container {
+            width: 100% !important;
         }
 
-        .breadcrumb-item {
+        .select2-container--default .select2-selection--multiple {
+            border-radius: var(--border-radius);
+            border: 1px solid #ced4da;
+            min-height: 40px;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin-top: 5px;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+            color: white;
+            margin-right: 5px;
+        }
+
+        #custom-category-container {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: var(--border-radius);
+            border: 1px solid #ced4da;
+        }
+
+        .toggle-container {
             display: flex;
             align-items: center;
+            margin-bottom: 20px;
         }
 
-        .breadcrumb-item a {
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin-right: 10px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: var(--success-color);
+        }
+
+        input:focus + .toggle-slider {
+            box-shadow: 0 0 1px var(--success-color);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+
+        .toggle-label {
+            font-weight: 500;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-right: 5px;
+            font-weight: 500;
+        }
+
+        .tab.active {
+            border-bottom: 2px solid var(--primary-color);
             color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.2s;
         }
 
-        .breadcrumb-item a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
+        .tab-content {
+            display: none;
         }
 
-        .breadcrumb-separator {
-            margin: 0 8px;
-            color: #6c757d;
-        }
-
-        .breadcrumb-active {
-            color: #6c757d;
+        .tab-content.active {
+            display: block;
         }
 
         @media (max-width: 768px) {
             .actions-row {
                 flex-direction: column;
             }
-            
+
             .actions-left, .actions-right {
-                flex-direction: column;
                 width: 100%;
+                flex-direction: column;
             }
 
             .btn {
@@ -315,18 +456,12 @@
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="~/AdminSide/AdminPanel/Dashboard.aspx" runat="server"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li class="breadcrumb-separator">/</li>
-                <li class="breadcrumb-item"><a href="~/AdminSide/AdminPanel/ManagePosts.aspx" runat="server">Manage Posts</a></li>
-                <li class="breadcrumb-separator">/</li>
-                <li class="breadcrumb-active">Edit Post</li>
-            </ul>
-            
-            <h1 class="page-title"><i class="fas fa-edit"></i> Edit Post</h1>
+            <h1 class="page-title">
+                <i class="fas fa-edit"></i> Edit Post
+            </h1>
 
-            <asp:Panel ID="pnlAlert" runat="server" Visible="false" CssClass="alert alert-success">
-                <asp:Literal ID="litAlertMessage" runat="server"></asp:Literal>
+            <asp:Panel ID="pnlAlert" runat="server" Visible="false" CssClass="alert">
+                <asp:Literal ID="litAlertMessage" runat="server" />
             </asp:Panel>
 
             <div class="card">
@@ -336,61 +471,172 @@
                 <div class="card-body">
                     <div class="form-group">
                         <asp:Label ID="lblTitle" runat="server" CssClass="form-label" AssociatedControlID="txtTitle">Title</asp:Label>
-                        <asp:TextBox ID="txtTitle" runat="server" CssClass="form-control" placeholder="Enter post title"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvTitle" runat="server" ControlToValidate="txtTitle" 
-                            ErrorMessage="Title is required" CssClass="text-danger" Display="Dynamic"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="txtTitle" runat="server" CssClass="form-control" placeholder="Enter post title" required="required" />
+                        <asp:RequiredFieldValidator ID="rfvTitle" runat="server" ControlToValidate="txtTitle"
+                            ErrorMessage="Title is required" Display="Dynamic" CssClass="text-danger" />
                     </div>
 
                     <div class="form-group">
-                        <asp:Label ID="lblCategory" runat="server" CssClass="form-label" AssociatedControlID="ddlCategory">Category</asp:Label>
-                        <asp:DropDownList ID="ddlCategory" runat="server" CssClass="form-select">
-                            <asp:ListItem Text="-- Select Category --" Value=""></asp:ListItem>
-                        </asp:DropDownList>
-                        <asp:RequiredFieldValidator ID="rfvCategory" runat="server" ControlToValidate="ddlCategory" 
-                            ErrorMessage="Category is required" CssClass="text-danger" Display="Dynamic" InitialValue=""></asp:RequiredFieldValidator>
+                        <asp:Label ID="lblSlug" runat="server" CssClass="form-label" AssociatedControlID="txtSlug">Slug (URL)</asp:Label>
+                        <asp:TextBox ID="txtSlug" runat="server" CssClass="form-control" placeholder="enter-post-slug" />
+                        <small class="text-muted">Leave empty to auto-generate from title</small>
                     </div>
 
-                    <div class="form-group">
-                        <asp:Label ID="lblExcerpt" runat="server" CssClass="form-label" AssociatedControlID="txtExcerpt">Excerpt</asp:Label>
-                        <asp:TextBox ID="txtExcerpt" runat="server" CssClass="form-control" placeholder="Enter a short excerpt (summary)" TextMode="MultiLine" Rows="3"></asp:TextBox>
+                    <div class="tabs">
+                        <div class="tab active" data-target="editor-tab">Content</div>
+                        <div class="tab" data-target="settings-tab">Settings</div>
+                        <div class="tab" data-target="seo-tab">SEO</div>
                     </div>
 
-                    <div class="form-group">
-                        <asp:Label ID="lblContent" runat="server" CssClass="form-label" AssociatedControlID="txtContent">Content</asp:Label>
-                        <asp:TextBox ID="txtContent" runat="server" TextMode="MultiLine" Rows="15" CssClass="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvContent" runat="server" ControlToValidate="txtContent" 
-                            ErrorMessage="Content is required" CssClass="text-danger" Display="Dynamic"></asp:RequiredFieldValidator>
+                    <div id="editor-tab" class="tab-content active">
+                        <div class="form-group">
+                            <asp:Label ID="lblExcerpt" runat="server" CssClass="form-label" AssociatedControlID="txtExcerpt">Excerpt</asp:Label>
+                            <asp:TextBox ID="txtExcerpt" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" placeholder="Enter a short excerpt for this post" />
+                            <small class="text-muted">A short summary of your post (optional)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <asp:Label ID="lblContent" runat="server" CssClass="form-label" AssociatedControlID="txtContent">Content</asp:Label>
+                            <asp:TextBox ID="txtContent" runat="server" TextMode="MultiLine" CssClass="form-control" />
+                            <asp:RequiredFieldValidator ID="rfvContent" runat="server" ControlToValidate="txtContent"
+                                ErrorMessage="Content is required" Display="Dynamic" CssClass="text-danger" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <asp:Label ID="lblFeaturedImage" runat="server" CssClass="form-label" AssociatedControlID="fileImage">Featured Image</asp:Label>
+                            <asp:FileUpload ID="fileImage" runat="server" CssClass="form-control" accept="image/*" />
+                            <small class="text-muted">Recommended size: 1200x630 pixels</small>
+                            
+                            <div id="currentImageContainer" runat="server" visible="false" class="mt-3">
+                                <p>Current image:</p>
+                                <asp:Image ID="imgCurrentImage" runat="server" CssClass="img-fluid img-thumbnail" style="max-height: 200px;" />
+                                <div class="mt-2">
+                                    <asp:Button ID="btnRemoveImage" runat="server" Text="Remove Image" CssClass="btn btn-sm btn-danger" 
+                                        OnClick="btnRemoveImage_Click" CausesValidation="false" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <asp:Label ID="lblTags" runat="server" CssClass="form-label" AssociatedControlID="txtTags">Tags</asp:Label>
-                        <asp:TextBox ID="txtTags" runat="server" CssClass="form-control" placeholder="Enter tags separated by commas"></asp:TextBox>
+                    <div id="settings-tab" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:Label ID="lblCategory" runat="server" CssClass="form-label" AssociatedControlID="ddlCategory">Category</asp:Label>
+                                    <asp:DropDownList ID="ddlCategory" runat="server" CssClass="form-select">
+                                        <asp:ListItem Text="-- Select Category --" Value="" />
+                                    </asp:DropDownList>
+                                </div>
+                                
+                                <div id="custom-category-container">
+                                    <div class="form-group">
+                                        <asp:Label ID="lblNewCategory" runat="server" CssClass="form-label" AssociatedControlID="txtNewCategory">New Category Name</asp:Label>
+                                        <asp:TextBox ID="txtNewCategory" runat="server" CssClass="form-control" placeholder="Enter new category name" />
+                                    </div>
+                                    <div class="form-group">
+                                        <asp:Label ID="lblParentCategory" runat="server" CssClass="form-label" AssociatedControlID="ddlParentCategory">Parent Category (Optional)</asp:Label>
+                                        <asp:DropDownList ID="ddlParentCategory" runat="server" CssClass="form-select">
+                                            <asp:ListItem Text="-- None --" Value="" />
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:Label ID="lblTags" runat="server" CssClass="form-label" AssociatedControlID="ddlTags">Tags</asp:Label>
+                                    <asp:ListBox ID="ddlTags" runat="server" CssClass="form-control" SelectionMode="Multiple"></asp:ListBox>
+                                    <small class="text-muted">Select existing tags or type to add new ones</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:Label ID="lblPublishDate" runat="server" CssClass="form-label" AssociatedControlID="txtPublishDate">Publish Date</asp:Label>
+                                    <asp:TextBox ID="txtPublishDate" runat="server" CssClass="form-control" placeholder="Select publish date and time" />
+                                    <small class="text-muted">Leave empty to publish immediately when setting status to Published</small>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:Label ID="lblStatus" runat="server" CssClass="form-label" AssociatedControlID="ddlStatus">Status</asp:Label>
+                                    <asp:DropDownList ID="ddlStatus" runat="server" CssClass="form-select">
+                                        <asp:ListItem Text="Draft" Value="Draft" />
+                                        <asp:ListItem Text="Published" Value="Published" />
+                                        <asp:ListItem Text="Pending Review" Value="Pending" />
+                                        <asp:ListItem Text="Archived" Value="Archived" />
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="toggle-container mt-3">
+                            <label class="toggle-switch">
+                                <asp:CheckBox ID="chkAllowComments" runat="server" Checked="true" />
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">Allow Comments</span>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <asp:Label ID="lblStatus" runat="server" CssClass="form-label" AssociatedControlID="ddlStatus">Status</asp:Label>
-                        <asp:DropDownList ID="ddlStatus" runat="server" CssClass="form-select">
-                            <asp:ListItem Text="Draft" Value="Draft"></asp:ListItem>
-                            <asp:ListItem Text="Published" Value="Published"></asp:ListItem>
-                            <asp:ListItem Text="Pending Approval" Value="Pending"></asp:ListItem>
-                            <asp:ListItem Text="Archived" Value="Archived"></asp:ListItem>
-                        </asp:DropDownList>
+                    <div id="seo-tab" class="tab-content">
+                        <div class="form-group">
+                            <asp:Label ID="lblMetaTitle" runat="server" CssClass="form-label" AssociatedControlID="txtMetaTitle">Meta Title</asp:Label>
+                            <asp:TextBox ID="txtMetaTitle" runat="server" CssClass="form-control" placeholder="Enter SEO title (max 60 characters)" MaxLength="60" />
+                            <small class="text-muted">Leave empty to use the post title</small>
+                        </div>
+
+                        <div class="form-group">
+                            <asp:Label ID="lblMetaDescription" runat="server" CssClass="form-label" AssociatedControlID="txtMetaDescription">Meta Description</asp:Label>
+                            <asp:TextBox ID="txtMetaDescription" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" placeholder="Enter meta description (max 160 characters)" MaxLength="160" />
+                            <small class="text-muted">Brief description for search engines (recommended 50-160 characters)</small>
+                        </div>
                     </div>
 
                     <div class="actions-row">
                         <div class="actions-left">
-                            <asp:Button ID="btnSaveAsDraft" runat="server" Text="Save as Draft" CssClass="btn btn-secondary" OnClick="btnSaveAsDraft_Click" CausesValidation="false" />
-                            <asp:Button ID="btnPreview" runat="server" Text="Preview" CssClass="btn btn-info" OnClick="btnPreview_Click" CausesValidation="false" />
+                            <asp:Button ID="btnSave" runat="server" Text="Save Changes" CssClass="btn btn-primary" OnClick="btnSave_Click">
+                                <i class="fas fa-save"></i>
+                            </asp:Button>
+                            <asp:Button ID="btnSaveAsDraft" runat="server" Text="Save as Draft" CssClass="btn btn-secondary" OnClick="btnSaveAsDraft_Click" CausesValidation="false">
+                                <i class="fas fa-save"></i>
+                            </asp:Button>
+                            <asp:Button ID="btnPublish" runat="server" Text="Publish" CssClass="btn btn-success" OnClick="btnPublish_Click">
+                                <i class="fas fa-paper-plane"></i>
+                            </asp:Button>
                         </div>
                         <div class="actions-right">
-                            <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" OnClick="btnCancel_Click" CausesValidation="false" />
-                            <asp:Button ID="btnSave" runat="server" Text="Save Changes" CssClass="btn btn-primary" OnClick="btnSave_Click" />
-                            <asp:Button ID="btnPublish" runat="server" Text="Publish" CssClass="btn btn-success" OnClick="btnPublish_Click" />
+                            <asp:Button ID="btnPreview" runat="server" Text="Preview" CssClass="btn btn-info" OnClick="btnPreview_Click" CausesValidation="false">
+                                <i class="fas fa-eye"></i>
+                            </asp:Button>
+                            <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click" CausesValidation="false">
+                                <i class="fas fa-times"></i>
+                            </asp:Button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            // Tab functionality
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all tab content
+                    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                    // Show content related to clicked tab
+                    document.getElementById(this.dataset.target).classList.add('active');
+                });
+            });
+        </script>
     </form>
 </body>
 </html> 

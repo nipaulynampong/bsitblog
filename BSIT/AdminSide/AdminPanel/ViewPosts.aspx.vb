@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 
 Namespace BSIT
     Partial Public Class ViewPosts
-        Inherits System.Web.UI.Page
+    Inherits System.Web.UI.Page
 
         Private Const ConnectionString As String = "Data Source=NIPAULYN\SQLEXPRESS01;Initial Catalog=blog;Integrated Security=True"
 
@@ -119,7 +119,7 @@ Namespace BSIT
                 ' Just log the error, don't show to the user
                 System.Diagnostics.Debug.WriteLine("Error loading categories: " & ex.Message)
             End Try
-        End Sub
+    End Sub
 
         Private Sub LoadPosts(Optional ByVal searchTerm As String = "", Optional ByVal category As String = "")
             Try
@@ -205,5 +205,5 @@ Namespace BSIT
                 System.Diagnostics.Debug.WriteLine("Error in LoadPosts: " & ex.ToString())
             End Try
         End Sub
-    End Class
+End Class
 End Namespace

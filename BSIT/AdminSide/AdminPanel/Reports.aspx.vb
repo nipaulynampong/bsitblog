@@ -3,8 +3,8 @@ Imports System.Data.SqlClient
 Imports System.IO
 
 Namespace BSIT
-    Public Class Reports
-        Inherits System.Web.UI.Page
+Public Class Reports
+    Inherits System.Web.UI.Page
 
         ' Control declarations
         Protected WithEvents txtStartDate As System.Web.UI.WebControls.TextBox
@@ -23,7 +23,7 @@ Namespace BSIT
 
         Private Const ConnectionString As String = "Data Source=NIPAULYN\SQLEXPRESS01;Initial Catalog=blog;Integrated Security=True"
 
-        Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
             If Not IsPostBack Then
                 ' Check if user is logged in and is admin
                 If Session("UserID") Is Nothing Then
@@ -189,7 +189,7 @@ Namespace BSIT
 
         Protected Sub btnExportCategories_Click(sender As Object, e As EventArgs)
             ExportToCSV("categories", GetCategoriesData())
-        End Sub
+    End Sub
 
         Private Function GetPageViewsData() As DataTable
             Dim connection As New SqlConnection(ConnectionString)
@@ -366,5 +366,5 @@ Namespace BSIT
             Response.Flush()
             Response.End()
         End Sub
-    End Class
+End Class
 End Namespace

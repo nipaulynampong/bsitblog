@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 
 Namespace BSIT
     Partial Public Class ManagePosts
-        Inherits System.Web.UI.Page
+    Inherits System.Web.UI.Page
 
         Private Const ConnectionString As String = "Data Source=NIPAULYN\SQLEXPRESS01;Initial Catalog=blog;Integrated Security=True"
 
@@ -238,7 +238,7 @@ Namespace BSIT
                 ' Just log the error, don't show to the user
                 System.Diagnostics.Debug.WriteLine("Error logging approval action: " & ex.Message)
             End Try
-        End Sub
+    End Sub
 
         Private Sub EnsureApprovalLogTableExists()
             Try
@@ -272,5 +272,5 @@ Namespace BSIT
                 System.Diagnostics.Debug.WriteLine("Error ensuring approval log table: " & ex.Message)
             End Try
         End Sub
-    End Class
+End Class
 End Namespace
