@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{734A8C3B-7B26-4BA3-9C88-1C08ADB205E3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BSIT</RootNamespace>
+    <AssemblyName>BSIT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>BSIT.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>BSIT.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminSide\AdminLogin.aspx" />
+    <Content Include="AdminSide\AdminPanel\AddUsers.aspx" />
+    <Content Include="AdminSide\AdminPanel\AdminPanel.aspx" />
+    <Content Include="AdminSide\AdminPanel\ArchivePosts.aspx" />
+    <Content Include="AdminSide\AdminPanel\Dashboard.aspx" />
+    <Content Include="AdminSide\AdminPanel\EditUsers.aspx" />
+    <Content Include="AdminSide\AdminPanel\ManagePosts.aspx" />
+    <Content Include="AdminSide\AdminPanel\ManageUsers.aspx" />
+    <Content Include="AdminSide\AdminPanel\Reports.aspx" />
+    <Content Include="AdminSide\AdminPanel\Settings.aspx" />
+    <Content Include="AdminSide\AdminPanel\ViewPosts.aspx" />
+    <Content Include="AdminSide\ForgetPasswordAdmin.aspx" />
+    <Content Include="AdminSide\ResetPasswordAdmin.aspx" />
+    <Content Include="Editor\EditorLogin.aspx" />
+    <Content Include="Editor\EditorPanel\CreatePosts.aspx" />
+    <Content Include="Editor\EditorPanel\EditorDashboard.aspx" />
+    <Content Include="Editor\EditorPanel\EditorPanel.aspx" />
+    <Content Include="Editor\EditorPanel\EditorSettings.aspx" />
+    <Content Include="Editor\ForgetPasswordEditor.aspx" />
+    <Content Include="Editor\ResetPasswordEditor.aspx" />
+    <Content Include="Images\a.jfif" />
+    <Content Include="Images\capstone %28Website%29 %281%29.png" />
+    <Content Include="Images\capstone %28Website%29 %282%29.png" />
+    <Content Include="Images\capstone %28Website%29.png" />
+    <Content Include="Images\datamex.jpg" />
+    <Content Include="Images\n.png" />
+    <Content Include="Student\CreateAccountStudents.aspx" />
+    <Content Include="Student\ForgetPasswordStudent.aspx" />
+    <Content Include="Student\ResetPasswordStudent.aspx" />
+    <Content Include="Student\StudentLogin.aspx" />
+    <Content Include="Student\StudentPanel\BookmarkPost.aspx" />
+    <Content Include="Student\StudentPanel\Posts.aspx" />
+    <Content Include="Student\StudentPanel\Settings.aspx" />
+    <Content Include="Student\StudentPanel\StudentPanel.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminSide\AdminLogin.aspx.designer.vb">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminLogin.aspx.vb">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\AddUsers.aspx.designer.vb">
+      <DependentUpon>AddUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\AddUsers.aspx.vb">
+      <DependentUpon>AddUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\AdminPanel.aspx.designer.vb">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\AdminPanel.aspx.vb">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\ArchivePosts.aspx.designer.vb">
+      <DependentUpon>ArchivePosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\ArchivePosts.aspx.vb">
+      <DependentUpon>ArchivePosts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\Dashboard.aspx.designer.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\Dashboard.aspx.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\EditUsers.aspx.designer.vb">
+      <DependentUpon>EditUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\EditUsers.aspx.vb">
+      <DependentUpon>EditUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\ManagePosts.aspx.designer.vb">
+      <DependentUpon>ManagePosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\ManagePosts.aspx.vb">
+      <DependentUpon>ManagePosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\ManageUsers.aspx.designer.vb">
+      <DependentUpon>ManageUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\ManageUsers.aspx.vb">
+      <DependentUpon>ManageUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\Reports.aspx.designer.vb">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\Reports.aspx.vb">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\Settings.aspx.designer.vb">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\Settings.aspx.vb">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\ViewPosts.aspx.designer.vb">
+      <DependentUpon>ViewPosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\AdminPanel\ViewPosts.aspx.vb">
+      <DependentUpon>ViewPosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\ForgetPasswordAdmin.aspx.designer.vb">
+      <DependentUpon>ForgetPasswordAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\ForgetPasswordAdmin.aspx.vb">
+      <DependentUpon>ForgetPasswordAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\ResetPasswordAdmin.aspx.designer.vb">
+      <DependentUpon>ResetPasswordAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\ResetPasswordAdmin.aspx.vb">
+      <DependentUpon>ResetPasswordAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Editor\EditorLogin.aspx.designer.vb">
+      <DependentUpon>EditorLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditorLogin.aspx.vb">
+      <DependentUpon>EditorLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Editor\EditorPanel\CreatePosts.aspx.designer.vb">
+      <DependentUpon>CreatePosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditorPanel\CreatePosts.aspx.vb">
+      <DependentUpon>CreatePosts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Editor\EditorPanel\EditorDashboard.aspx.designer.vb">
+      <DependentUpon>EditorDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditorPanel\EditorDashboard.aspx.vb">
+      <DependentUpon>EditorDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Editor\EditorPanel\EditorPanel.aspx.designer.vb">
+      <DependentUpon>EditorPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditorPanel\EditorPanel.aspx.vb">
+      <DependentUpon>EditorPanel.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Editor\EditorPanel\EditorSettings.aspx.designer.vb">
+      <DependentUpon>EditorSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditorPanel\EditorSettings.aspx.vb">
+      <DependentUpon>EditorSettings.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Editor\ForgetPasswordEditor.aspx.designer.vb">
+      <DependentUpon>ForgetPasswordEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\ForgetPasswordEditor.aspx.vb">
+      <DependentUpon>ForgetPasswordEditor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Editor\ResetPasswordEditor.aspx.designer.vb">
+      <DependentUpon>ResetPasswordEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\ResetPasswordEditor.aspx.vb">
+      <DependentUpon>ResetPasswordEditor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Module\Connection.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Student\CreateAccountStudents.aspx.designer.vb">
+      <DependentUpon>CreateAccountStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\CreateAccountStudents.aspx.vb">
+      <DependentUpon>CreateAccountStudents.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Student\ForgetPasswordStudent.aspx.designer.vb">
+      <DependentUpon>ForgetPasswordStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ForgetPasswordStudent.aspx.vb">
+      <DependentUpon>ForgetPasswordStudent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Student\ResetPasswordStudent.aspx.designer.vb">
+      <DependentUpon>ResetPasswordStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ResetPasswordStudent.aspx.vb">
+      <DependentUpon>ResetPasswordStudent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentLogin.aspx.designer.vb">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentLogin.aspx.vb">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentPanel\BookmarkPost.aspx.designer.vb">
+      <DependentUpon>BookmarkPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentPanel\BookmarkPost.aspx.vb">
+      <DependentUpon>BookmarkPost.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentPanel\Posts.aspx.designer.vb">
+      <DependentUpon>Posts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentPanel\Posts.aspx.vb">
+      <DependentUpon>Posts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentPanel\Settings.aspx.designer.vb">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentPanel\Settings.aspx.vb">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentPanel\StudentPanel.aspx.designer.vb">
+      <DependentUpon>StudentPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentPanel\StudentPanel.aspx.vb">
+      <DependentUpon>StudentPanel.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51479</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

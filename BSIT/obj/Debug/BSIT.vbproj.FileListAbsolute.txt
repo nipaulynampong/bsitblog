@@ -1,0 +1,8 @@
+C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\obj\Debug\BSIT.Resources.resources
+C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\obj\Debug\BSIT.vbproj.GenerateResource.Cache
+C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\bin\BSIT.dll
+C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\bin\BSIT.pdb
+C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\bin\BSIT.xml
+C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\obj\Debug\BSIT.dll
+C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\obj\Debug\BSIT.xml
+C:\Users\wanni\Documents\Visual Studio 2010\Projects\BSIT\BSIT\obj\Debug\BSIT.pdb
